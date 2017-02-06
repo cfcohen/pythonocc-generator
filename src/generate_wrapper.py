@@ -171,7 +171,10 @@ HXX_TO_EXCLUDE = ['TCollection_AVLNode.hxx',
                   'ChFiKPart_ComputeData_Rotule.hxx',
                   'PrsMgr_ListOfPresentableObjects.hxx',
                   'PrsMgr_PresentableObject.hxx',
-                  'TDF_LabelMapHasher.hxx'
+                  'TDF_LabelMapHasher.hxx',
+                  ## SMESH
+                  'SMESH_DataMapOfElemPtrSequenceOfElemPtr.hxx',
+                  'SMESH_HypoFilter.hxx'
                   ]
 
 
@@ -432,6 +435,7 @@ def adapt_header_file(header_content):
     header_content = header_content.replace("SMESHCONTROLS_EXPORT", "")
     header_content = header_content.replace("SMESHDS_EXPORT", "")
     header_content = header_content.replace("STDMESHERS_EXPORT", "")
+    header_content = header_content.replace("NETGENPLUGIN_EXPORT", "")
     return header_content
 
 
